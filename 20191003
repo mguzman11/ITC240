@@ -1,0 +1,70 @@
+<?php
+//weekday.php
+
+$myDay= date ('l');
+$myHour= date ('G');
+
+
+/*
+4 am to noon is good morning (4-12)
+noon to 5 pm is good afternoon (12-17)
+5 pm to 9 pm is good evening (17- 21)
+after 9 pm is good night (21-23 and 0-4)
+*/
+
+if ($myHour >= 4 && < 12)
+{
+  $greeting= "Good Morning";
+  $greetingColor= "orange";
+} 
+
+elseif($myHour >= 12 && < 17){
+  $greeting= "Good afternoon";
+  $greetingColor= "yellow";
+    
+}
+elseif($myHour >= 17 && < 21){
+  $greeting= "Good evening";
+  $greetingColor= "red";
+}
+    
+else 
+{
+  $greeting= "Good night";
+  $greetingColor= "navy blue";
+    
+}
+
+switch ($myDay)
+{
+    case 'Monday': 
+        $coffee= 'Mocha';
+        $color= 'Cosmic latte';
+        $image= 'mocha.jpg';
+    break; 
+    
+        case 'Tuesday': 
+        $coffee= 'Latte';
+        $color= 'latte';
+        $image= 'latte.jpg';
+    break;
+        
+    
+        case 'Thursday': 
+        $coffee= 'Pumpkin Spice';
+        $color= '#D88B4C';
+        $image= 'ps-latte.jpg';
+    break;
+}
+?>
+
+<html>
+
+    <body>
+     <h1> Today is <?=$myDay?></h1>
+        <p>Today's coffee is <b style="color:<?=$color?>"><?=$coffee?></b></p>
+        <p><b style="color:<?=$greetingColor?>"><?=$greeting?></b></p>
+    
+    </body>
+
+</html>
