@@ -68,8 +68,10 @@ if(isset($_POST["FirstName"])){//if data show it
         </div>
         
         <div class="form-group col-lg-4">
-            <label class="text-heading" for="Acknowledgment">By checking this box, I understand this is fake</label><br>
-            <input type="checkbox" name="Acknowlegdment" value="Agree" required /> Agree <br>
+            <label class="text-heading" for="Acknowledgment">I understand this is fake</label><br>
+            <input type="checkbox" name="Acknowlegdment" value="Agree"  /> Agree <br>
+            <input type="checkbox" name="Acknowlegdment" value="Disagree" /> Disagree <br>
+            <input type="checkbox" name="Acknowlegdment" value="I have no clue" /> I have no clue <br>
         </div>
        
         <div class="form-group col-lg-12">
