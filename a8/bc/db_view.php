@@ -22,13 +22,13 @@ if (mysqli_num_rows($result) > 0)//at least one record!
 	while ($row = mysqli_fetch_assoc($result))
     {
 	   echo "<p>";
-	   echo '<img src="img/produce' . $row['ProduceID'] .jpg"/>'";
+        echo '<img src="img/produce' . $row['ProduceID'] .'.jpg"/><br />';
 	   echo "ProduceName: <b>" . $row['ProduceName'] . "</b><br />";
 	   echo "Type: <b>" . $row['Type'] . "</b><br />";
 	   echo "Family: <b>" . $row['Family'] . "</b><br />";
 	   echo "Color: <b>" . $row['Color'] . "</b><br />";
         
-        //echo '<a href="db_view.php?id=' . $row['ProduceID'] . '">See ' . $row['ProduceName'] . '</a>';
+       // echo '<a href="db_view.php?id=' . $row['ProduceID'] . '">See ' . $row['ProduceName'] . '</a>';
 	   echo "</p>";
     }
 }else{//no records
